@@ -109,17 +109,27 @@
 // debounce(printName, 2000)();
 
 // Q9: [1,2,-1,3,-2] 5 Max sum subarray
-const maxSum = (arr) => {
-  let result = 0;
-  const n = arr.length;
-  for (let i = 0; i < n; i++) {
-    let curr = 0;
-    for (let j = 0; j < n; j++) {
-      curr = curr + arr[j];
-      result = Math.max(result, curr);
-    }
-  }
-  return result;
+// const maxSum = (arr) => {
+//   let result = 0;
+//   const n = arr.length;
+//   for (let i = 0; i < n; i++) {
+//     let curr = 0;
+//     for (let j = 0; j < n; j++) {
+//       curr = curr + arr[j];
+//       result = Math.max(result, curr);
+//     }
+//   }
+//   return result;
+// };
+
+// console.log(maxSum([1, 4, -3, 2, -4, 5]));
+
+// Q9: [1,2] => [{1:1, 2:2}]
+
+const modArr = (arr) => {
+  return arr.map((el) => {
+    return { [el]: el };
+  });
 };
 
-console.log(maxSum([1, 4, -3, 2, -4, 5]));
+console.log(modArr([1, 2]));
