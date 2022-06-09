@@ -80,5 +80,15 @@
 //   console.log(this.message);
 // }
 
-// // call, bind and apply
 // logMessage.call(object2);
+
+// Q7: currying
+// function sum(a) {
+//   return (b) => {
+//     return b ? sum(a + b) : a;
+//   };
+// }
+
+// console.log(sum(1)(2)(3)());
+
+// Q8
