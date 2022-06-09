@@ -92,18 +92,34 @@
 // console.log(sum(1)(2)(3)());
 
 // Q8: debouncing
-const debounce = (func, d) => {
-  let timer;
-  return () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      func();
-    }, d);
-  };
+// const debounce = (func, d) => {
+//   let timer;
+//   return () => {
+//     clearTimeout(timer);
+//     timer = setTimeout(() => {
+//       func();
+//     }, d);
+//   };
+// };
+
+// const printName = () => {
+//   console.log("Hey Dhwaj");
+// };
+
+// debounce(printName, 2000)();
+
+// Q9: [1,2,-1,3,-2] 5 Max sum subarray
+const maxSum = (arr) => {
+  let result = 0;
+  const n = arr.length;
+  for (let i = 0; i < n; i++) {
+    let curr = 0;
+    for (let j = 0; j < n; j++) {
+      curr = curr + arr[j];
+      result = Math.max(result, curr);
+    }
+  }
+  return result;
 };
 
-const printName = () => {
-  console.log("Hey Dhwaj");
-};
-
-debounce(printName, 2000)();
+console.log(maxSum([1, 4, -3, 2, -4, 5]));
