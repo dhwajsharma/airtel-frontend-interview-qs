@@ -91,4 +91,19 @@
 
 // console.log(sum(1)(2)(3)());
 
-// Q8
+// Q8: debouncing
+const debounce = (func, d) => {
+  let timer;
+  return () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func();
+    }, d);
+  };
+};
+
+const printName = () => {
+  console.log("Hey Dhwaj");
+};
+
+debounce(printName, 2000)();
