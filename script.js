@@ -136,15 +136,19 @@
 // Q10: React testing -> Jest and RTL talk about spy user event assertion
 
 // Q11: closure + setTimeout
-function x() {
-  for (var i = 1; i <= 3; i++) {
-    function y(i) {
-      setTimeout(() => {
-        console.log(i);
-      }, 1000);
-    }
-    y(i);
-  }
-}
+// function x() {
+//   for (var i = 1; i <= 3; i++) {
+//     function y(i) {
+//       setTimeout(() => {
+//         console.log(i);
+//       }, 1000);
+//     }
+//     y(i);
+//   }
+// }
 
-x();
+// x();
+
+// Q12: event loop -> callstack callback q and microtask q web apis sync
+
+// Q13: todo app
