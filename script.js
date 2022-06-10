@@ -125,11 +125,26 @@
 // console.log(maxSum([1, 4, -3, 2, -4, 5]));
 
 // Q9: [1,2] => [{1:1, 2:2}]
+// const modArr = (arr) => {
+//   return arr.map((el) => {
+//     return { [el]: el };
+//   });
+// };
 
-const modArr = (arr) => {
-  return arr.map((el) => {
-    return { [el]: el };
-  });
-};
+// console.log(modArr([1, 2]));
 
-console.log(modArr([1, 2]));
+// Q10: React testing -> Jest and RTL talk about spy user event assertion
+
+// Q11: closure + setTimeout
+function x() {
+  for (var i = 1; i <= 3; i++) {
+    function y(i) {
+      setTimeout(() => {
+        console.log(i);
+      }, 1000);
+    }
+    y(i);
+  }
+}
+
+x();
